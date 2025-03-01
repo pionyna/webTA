@@ -1,0 +1,233 @@
+/* Sidebar Awalnya Tersembunyi */
+.kiri {
+  height: 100%;
+  width: 200px;
+  background-color: #bfecff;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Sidebar tersembunyi */
+  transition: left 0.3s ease-in-out;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Ketika Sidebar Dibuka */
+.kiri.open {
+  left: 0; /* Sidebar muncul */
+}
+
+.kiri img {
+  background-color: #bfecff;
+  width: 100px;
+  height: auto;
+  margin-top: 50px;
+}
+
+.kiri nav a {
+  display: block;
+  color: #2ca2d5;
+  text-decoration: none;
+  margin: 30px 0;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.kiri a:hover {
+  background-color: #2ca2d576;
+}
+.button {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: monospace;
+  width: 150px;
+  height: 90px;
+  cursor: pointer;
+  background-color: #bfecff;
+  position: fixed;
+  top: 50%;
+  left: -100px;
+  transition:
+    left 0.3s ease-in-out,
+    transform 0.3s ease;
+  border-radius: 15px;
+  z-index: 10;
+}
+
+.button.open {
+  left: 100px; /* Menggeser tombol ke kanan saat sidebar terbuka */
+  /* Menambahkan rotasi tombol */
+}
+
+.button a {
+  margin-left: 110px;
+  color: #2ca2d5;
+  font-size: 30px;
+}
+
+.button a.open {
+  transform: rotate(180deg);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #bfecff;
+  font-family: monospace;
+  font-weight: bold;
+  align-items: center;
+  padding: 10px;
+  padding-left: 100px;
+  position: fixed;
+  left: -60px;
+  top: 0;
+  right: 0;
+  transition: left 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.header h1 {
+  color: #2ca2d5;
+  font-size: 20px;
+}
+
+.header p {
+  display: flex;
+  align-items: center;
+  color: #2ca2d5;
+  margin-right: 20px;
+}
+
+.header img {
+  margin-left: 20px;
+}
+
+header.open {
+  left: 200px;
+  padding-left: auto;
+}
+
+.login-page {
+  margin: auto;
+  border: 1px solid black;
+  background: #bfecff;
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  .content {
+    margin-left: 100px;
+
+    h1 {
+      font-size: 40px;
+      color: #fff;
+      margin-bottom: 70px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    form {
+      margin: auto;
+
+      :-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: #fff;
+      }
+
+      :-moz-placeholder {
+        font-size: 20px;
+        color: #fff;
+      }
+
+      ::-moz-placeholder {
+        font-size: 20px;
+        color: #fff;
+      }
+
+      :-ms-input-placeholder {
+        font-size: 20px;
+        color: #fff;
+      }
+
+      p {
+        margin-bottom: 26px;
+
+        .txt {
+          padding-left: 56px;
+          width: 366px;
+          height: 60px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border: 1px solid #ccc;
+          border-radius: 5px;
+
+          &:hover {
+            box-shadow: 1px 1px 5px #999;
+          }
+        }
+
+        button {
+          width: 366px;
+          height: 60px;
+          background-color: #2ca2d5;
+          color: #fff;
+          font-size: 30px;
+          border: none;
+          border-radius: 5px;
+        }
+      }
+
+      .code {
+        display: flex;
+        align-items: center;
+        margin-bottom: 26px;
+
+        input {
+          padding-left: 56px;
+          width: 210;
+          height: 60px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        .cap {
+          display: inline-block;
+          margin-left: 10px;
+          width: 146px;
+          height: 60px;
+          line-height: 60px;
+          background-color: rgba(255, 255, 255, 0.2);
+          text-align: center;
+        }
+      }
+
+      .remb {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+
+        input {
+          width: 24px;
+          height: 29px;
+          border: none;
+        }
+
+        span {
+          font-size: 24px;
+          color: #fff;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    p:nth-last-child(1) {
+      font-size: 24px;
+      color: #fff;
+
+      span {
+        margin-left: 5px;
+        color: #5fdbfc;
+      }
+    }
+  }
+}
