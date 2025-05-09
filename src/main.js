@@ -1,12 +1,8 @@
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
 import App from './App.vue'
-import router from './router'
+import router from './router' // pastikan ini ada
 
 const app = createApp(App)
 
-app.use(createPinia())
-app.use(router)
-
+app.use(router) // INI HARUS ADA!
 app.mount('#app')

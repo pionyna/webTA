@@ -1,14 +1,9 @@
 <script setup>
-// Tidak perlu impor Main di sini jika sudah diatur di router.js
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <!-- Hanya letakkan router-view di sini -->
-  <router-view></router-view>
+  <RouterView />
 </template>
 
-<style>
-h1 {
-  color: rgb(0, 0, 0);
-}
-</style>
+<style scoped></style>
